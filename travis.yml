@@ -1,6 +1,5 @@
-language: node_js
-node_js:
-  - "7"
+language: node_js # Sets which engine use to build the project
+node_js: "node" # Specifies node version to use "node"="latest"
 services:
   - docker
 
@@ -10,3 +9,7 @@ before_install:
 
 script:
 - bundle exec npm test
+
+cache:
+  directories:
+    - "node_modules"
